@@ -1,0 +1,20 @@
+# ccd 
+
+ccd is a really simple tool for moving around the file system faster.
+It allows you to create shortcuts to directories rather than typing
+out the whole path.
+
+## Usage
+
+$ ccd foo # cds to the directory associated with the "foo" shortcut
+
+$ ccd add bar # makes "bar" a ccd shortcut to the current directory
+
+$ ccd list # displays the mapping of shortcuts to directories
+
+## Installation
+
+Just clone the repository to where ever you want, cd into it, and run ./install.
+Note that you must be in the repository directory, since the install script uses pwd.
+It will append a few lines onto your .bashrc file, so if you have some other setup
+take a look at the install script and change it as appropriate.
