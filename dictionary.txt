@@ -1,1 +1,8 @@
 ja /home/liam/Documents/code/java
+c /home/liam/Documents/code/c
+ccd /home/liam/Documents/code/ccd
+home /home/liam
+co /home/liam/Documents/code
+dow /home/liam/Downloads
+ha /home/liam/Documents/code/haskell
+cl /home/liam/Documents/code/clojure
