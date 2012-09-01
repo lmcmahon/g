@@ -1,6 +1,6 @@
 ja /home/liam/Documents/code/java
 c /home/liam/Documents/code/c
-ccd /home/liam/Documents/code/ccd
+g /home/liam/Documents/code/g
 home /home/liam
 co /home/liam/Documents/code
 dow /home/liam/Downloads

@@ -1,20 +1,30 @@
-# ccd 
+# g 
 
-ccd is a really simple tool for moving around the file system faster.
+g is a really simple tool for moving around the file system faster.
 It allows you to create shortcuts to directories rather than typing
 out the whole path.
 
+The whole thing is tiny enough that you can read through/modify it easily.
+The name was chosen primarily because its one letter.
+
 ## Usage
 
-$ ccd foo # cds to the directory associated with the "foo" shortcut
+$ g foo # cds to the directory associated with the "foo" shortcut
 
-$ ccd add bar # makes "bar" a ccd shortcut to the current directory
+$ g add bar # makes "bar" a g shortcut to the current directory
 
-$ ccd list # displays the mapping of shortcuts to directories
+$ g list # displays the mapping of shortcuts to directories
+
+## Known problems
+
+Since this is just using grep to get the mapping out of the dictionary,
+you might get the wrong one if one shortcut is a prefix of another shortcut.
+You can avoid this problem by putting the longer shortcut before the prefix.
 
 ## Installation
 
-Just clone the repository to where ever you want, cd into it, and run ./install.
+Just clone the repository to wherever you want, cd into it, and run ./install (then
+restart you terminal).
 Note that you must be in the repository directory, since the install script uses pwd.
 It will append a few lines onto your .bashrc file, so if you have some other setup
 take a look at the install script and change it as appropriate.

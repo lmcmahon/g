@@ -1,0 +1,16 @@
+#! /bin/bash
+
+# Change the CCD_DICTIONARY_PATH variable to wherever you have the code
+install_dir="$(pwd)"
+cat ccd.sh | sed s/CCD_DICTIONARY_PATH="/home/$USER/Documents/code/ccd/dictionary.txt"/CCD_DICTIONARY_PATH=$install_dir/ > ccd_temp
+mv ccd_temp ccd.sh
+
+# load the file when bash starts up
+cd
+echo "# load ccd" >> .bashrc
+echo "source $install_dir/ccd.sh" >> .bashrc
+
+# clear the dictionary (I assume you don't care about my shortcuts)
+cd $install_dir
+rm dictionary.txt
+touch dictionary.txt
