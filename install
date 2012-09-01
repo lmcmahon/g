@@ -2,7 +2,9 @@
 
 # Change the G_DICTIONARY_PATH variable to wherever you have the code
 install_dir="$(pwd)"
-cat g.sh | sed s/G_DICTIONARY_PATH="/home/$USER/Documents/code/g/dictionary.txt"/G_DICTIONARY_PATH=$install_dir/ > g_temp
+sed_exp="s:G_DICTIONARY_PATH=\"/home/$USER/Documents/code/g/dictionary.txt\":G_DICTIONARY_PATH=$install_dir:"
+echo $sed_exp
+cat g.sh | sed $sed_exp > g_temp
 mv g_temp g.sh
 
 # load the file when bash starts up
